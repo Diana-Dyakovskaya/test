@@ -4,13 +4,24 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/app.min.css">
-  <title>Uber Eats</title>
+  <title>Test</title>
 </head>
 <body>
-<header></header>
-<main></main>
-<footer></footer>
+<main class='main'>
+  <div class="container">
+    <div class='main__image'>
+      <img loading='lazy' src='/images/dest/best-selling.jpg'>
+    </div>
+    <form class='main__form form' method='post' enctype='multipart/form-data'>
+      <input class='form__input' type='tel' name='phone' required placeholder='Ваш номер...' minlength='7'>
+      <button class='form__btn' type='submit'><span>Заказать</span></button>
+    </form>
+  </div>
+</main>
 <script src="js/app.min.js"></script>
 </body>
 </html>

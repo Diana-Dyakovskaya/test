@@ -7,7 +7,7 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 :focus, :active {
@@ -24,8 +24,8 @@ nav, footer, header, aside {
 
 html, body {
   width: 100%;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 1.5;
   color: #1D1D1D;
   font-weight: 400;
   font-family: 'Roboto', sans-serif;
@@ -38,9 +38,15 @@ input, button, textarea {
 input::-ms-clear {
   display: none;
 }
+input {
+  border: none;
+  background: none;
+}
 
 button {
   cursor: pointer;
+  border: none;
+  background: none;
 }
 
 button::-moz-focus-inner {
@@ -68,4 +74,86 @@ img {
 h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: inherit;
+}
+
+/*---------Основные стили-----------*/
+.container {
+  position: relative;
+  width: 100vw;
+}
+
+.main__image {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.main__image img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main__form {
+  position: absolute;
+  display: flex;
+  z-index: 3;
+  top: 20%;
+  left: 10%;
+  right: 30%;
+  transform: skew(-45deg);
+  background: rgba(255, 255, 255, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+
+.form__input {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 15px 20px;
+  transform: skew(45deg);
+}
+
+
+.form__btn {
+  padding: 15px 25px;
+  color: #ffffff;
+  background-color: red;
+  border-left: 2px solid rgba(255, 255, 255, 0.8);
+  z-index: 4;
+
+  span {
+    display: block;
+    transform: skew(45deg);
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 577px) {
+  .main__form {
+    left: 5%;
+    right: 5%;
+    transform: skew(0);
+    flex-wrap: wrap;
+  }
+
+  .form__input {
+    padding: 10px 10px;
+    border-right: 2px solid rgba(255, 255, 255, 0.8);
+    transform: skew(0);
+  }
+
+  .form__btn {
+    padding: 10px 10px;
+    flex: 1 1 auto;
+
+    span {
+      transform: skew(0deg);
+      font-size: 18px;
+    }
+  }
 }
