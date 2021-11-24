@@ -12,16 +12,20 @@
 </head>
 <body>
 <main class='main'>
-  <div class="container">
+  <div class='container'>
     <div class='main__image'>
       <img loading='lazy' src='/images/dest/best-selling.jpg'>
     </div>
-    <form class='main__form form' method='post' enctype='multipart/form-data'>
+    <form class='main__form form' id='form' method='post' enctype='multipart/form-data'>
       <input class='form__input' type='tel' name='phone' required placeholder='Ваш номер...' minlength='7'>
-      <button class='form__btn' type='submit'><span>Заказать</span></button>
+      <button class='form__btn' type='submit'>
+        <span>Заказать</span>
+        <span class="fa fa-arrow-left"></span>
+      </button>
     </form>
   </div>
 </main>
+<script src="https://use.fontawesome.com/b3f8da13ae.js"></script>
 <script src="js/app.min.js"></script>
 </body>
 </html>
